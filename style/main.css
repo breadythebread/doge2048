@@ -18,19 +18,6 @@ body {
   content: "";
   display: block;
   clear: both; }
-
-h1.title {
-  color:#333;
-  font-size: 48px;
-  font-weight: bold;
-  margin: 0;
-  display: block;
-  float: left; }
-  
-  #twitter-widget-0 {
-    width: 100px !important;    
-    position: relative;
-  }
   
   .COINWIDGETCOM_CONTAINER {
   position: relative;
@@ -171,13 +158,6 @@ h1.title {
     -moz-animation-fill-mode: both;
     animation-fill-mode: both; }
     
-
-  .info-container {
-    position: relative;
-    cursor:pointer;
-    left:50%;
-    margin-left:-32px;
-    margin-bottom:10px;}
     
   .key-container {
     position: relative;
@@ -206,46 +186,6 @@ h1.title {
     color:#fff;
   }
     
-  .info-container, .hide-info {
-    background: #f0f;
-    padding: 10px 15px;
-    height: 10px;
-    line-height: 10px;
-    font-size:10px;
-    font-weight: bold;
-    border-radius: 3px;
-    color: white;
-    margin-top: 8px;
-    width: 36px;
-    text-align: center; }
-      .info-container a, .hide-info a{
-        color:#fff;
-        text-decoration:none;}
-    
-  .game-container .info {
-    display: none;
-    position: absolute;
-    overflow-y: scroll;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: rgba(255,255,255,0.9);
-    z-index: 100;
-    border-radius: 6px;
-    text-align: center;
-/*    -webkit-animation: fade-in 800ms ease;
-    -moz-animation: fade-in 800ms ease;
-    animation: fade-in 800ms ease;*/
-    -webkit-animation-fill-mode: both;
-    -moz-animation-fill-mode: both;
-    animation-fill-mode: both; }
-    .game-container .info p {
-      position:relative;
-      font-size: 16px;
-      padding:10px 20px 10px 20px;
-      font-weight: bold;}
-      
       
   .key-container, .hide-key {
     background: #f0f;
@@ -280,11 +220,7 @@ h1.title {
     -webkit-animation-fill-mode: both;
     -moz-animation-fill-mode: both;
     animation-fill-mode: both; }
-    .game-container .info p {
-      position:relative;
-      font-size: 16px;
-      padding:10px 20px 10px 20px;
-      font-weight: bold;}
+
 
 .score-container, .best-container {
   position: relative;
@@ -1017,11 +953,6 @@ hr {
     
     .COINWIDGETCOM_CONTAINER {
       display:none !important;
-    }
-
-    .game-container .info p {
-      font-size: 12px;
-      padding:5px 10px 5px 10px;
     }
 
   .game-container {
