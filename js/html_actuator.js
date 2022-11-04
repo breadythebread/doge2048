@@ -2,18 +2,13 @@ function HTMLActuator() {
   this.tileContainer    = document.querySelector(".tile-container");
   this.scoreContainer   = document.querySelector(".score-container");
   this.bestContainer    = document.querySelector(".best-container");
-  this.messageContainer = document.querySelector(".game-message");
-  this.info             = document.querySelector(".info");  
+  this.messageContainer = document.querySelector(".game-message"); 
   this.key             = document.querySelector(".key");  
   this.dogeSays = document.querySelector(".doge-says");
   this.adSpace = document.querySelector(".shout-out");
 
   this.score = 0;
 }
-
-var dogeSayings = ['such good', 'so amaze', 'many points', 'very unstoppable', 'great jorb', 'such playing', 'very good', 'points', 'very gaming', 'such player', 'concern' ,'bewildered',
-'many game', 'so good', 'very scores', 'so scoring', 'so hot right now', 'such playing', 'such matching', 'so matched', 'very matched', 'very neat' ,'such natural',]
-
 
 HTMLActuator.prototype.actuate = function (grid, metadata) {
   var self = this;
@@ -126,17 +121,6 @@ HTMLActuator.prototype.updateScore = function (score) {
     addition.textContent = "+" + difference;
     this.scoreContainer.appendChild(addition);
     
-    var message = dogeSayings[Math.floor(Math.random() * dogeSayings.length)]
-    var messageElement = document.createElement("p");
-    messageElement.textContent = message
-    var left = 'left:' + Math.round(Math.random() * 80) + '%;'
-    var top = 'top:' + Math.round(Math.random() * 80) + '%;'
-    var color = 'color: rgb(' + Math.round(Math.random() * 255) + ', ' + Math.round(Math.random() * 255) + ', ' + Math.round(Math.random() * 255) + ');'
-    var styleString = left + top + color
-    messageElement.setAttribute('style', styleString);
-    this.dogeSays.appendChild(messageElement);
-    if (difference > 4) {
-     this.adSpace.innerHTML = ads[Math.floor(Math.random() * ads.length)]
     }
     
   }
@@ -159,32 +143,6 @@ HTMLActuator.prototype.clearMessage = function () {
   this.messageContainer.classList.remove("game-won");
   this.messageContainer.classList.remove("game-over");
 };
-
-
-HTMLActuator.prototype.showInfo = function () {
-  if ( this.info.getAttribute('style') === "display:block;"){
-    this.info.setAttribute('style','display:none;')
-    document.querySelector('.show-info').innerHTML = 'INFO';
-  } else {
-    this.info.setAttribute('style','display:block;') 
-    document.querySelector('.show-info').innerHTML = 'CLOSE';
-  }
-}
-
-
-HTMLActuator.prototype.hideInfo = function () {
-    this.key.setAttribute('style','display:none;')
-}
-
-HTMLActuator.prototype.showKey = function () {
-  if ( this.key.getAttribute('style') === "display:block;"){
-    this.key.setAttribute('style','display:none;')
-    document.querySelector('.show-key').innerHTML = 'BLOCKS';
-  } else {
-    this.key.setAttribute('style','display:block;') 
-    document.querySelector('.show-key').innerHTML = 'CLOSE';
-  }
-}
 
 
 HTMLActuator.prototype.hideKey = function () {
